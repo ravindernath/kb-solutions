@@ -33,7 +33,7 @@ const Login = () => {
             console.log(JSON.stringify(data));
             console.log("Login Successful");
             localStorage.setItem("userInfo", JSON.stringify(data));
-            navigate("/dashboard");
+            navigate("/");
         } catch (error) {
             console.log("Error Occured!")
         }

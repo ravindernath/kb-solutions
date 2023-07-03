@@ -1,15 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import banner1 from '../images/banner/b1.jpg';
 import google_icon from '../images/icons/google.png';
 import Logo_Light from '../images/chetulogo-light.png'
 import Login from '../components/authentication';
-
-// const colors = {
-//   primary: "#060606",
-//   background: "#f5f5f5",
-//   disabled: "#d9d9d9"
-// }
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -17,6 +11,17 @@ const LoginPage = () => {
   const handleHome = () => {
     navigate('/'); // Navigate to the '/Home' page
   };
+  useEffect(() => {
+    try {
+        const user = JSON.parse(localStorage.getItem("userInfo"));    
+        if (user) {
+          navigate('/');
+        }
+      } catch (error) {
+        console.error("Error parsing user info:", error);
+        // Handle the error as per your application's requirements
+      }      
+}, [navigate]);
 
   return (
     <div className="w-full h-screen flex items-start">
