@@ -1,11 +1,10 @@
-import React from 'react';
-
+import React from 'react'
 import signupImage from '../../images/illustrations/signup.png';
 import walletImage from '../../images/illustrations/wallet.png';
 import okayImage from '../../images/illustrations/okay.png';
 import arrow from '../../images/arrow.svg';
 
-export default function StepSection() {
+const HomeSection5 = () => {
   return (
     <section className="px-6">
       <div className='rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20'>
@@ -53,3 +52,5 @@ export default function StepSection() {
     </section>
   );
 }
+
+export default HomeSection5

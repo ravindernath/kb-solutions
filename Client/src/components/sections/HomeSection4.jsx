@@ -1,46 +1,46 @@
-import React from 'react';
+import React from 'react'
 import { BsCheckCircleFill } from 'react-icons/bs';
 
 import banks from '../../images/illustrations/banks.png';
 
-export default function SecuritySection() {
+const HomeSection4 = () => {
   return (
     <section className="container mx-auto py-32">
       <div className="grid md:grid-cols-2">
         <div>
-            <img src={banks} alt="" />
+          <img src={banks} alt="" />
         </div>
         <div className="flex justify-center">
           <div className="max-w-xl">
             <h2 className="font-bold text-4xl mb-6 leading-normal">
-              Industry-leading security from day one
+              Lorem Ipsum is simply dummy text
             </h2>
             <ul className="my-6">
               <li className='mb-6'>
                 <span>
                   <BsCheckCircleFill className='text-primary inline mr-2' />
-                  Safety, security and compliance
+                  What is Lorem Ipsum?
                 </span>
                 <p className="text-gray">
-                  NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the cybersecurity audits conducted by the New York Department of Financial Services. Learn more about our commitment to security.
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                 </p>
               </li>
               <li className='mb-6'>
                 <span>
                   <BsCheckCircleFill className='text-primary inline mr-2' />
-                  Hardware security keys
+                  Why do we use it?
                 </span>
                 <p className="text-gray">
-                  With NEFA you can secure your account with a hardware security key via WebAuthn.
+                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                 </p>
               </li>
               <li className='mb-6'>
                 <span>
                   <BsCheckCircleFill className='text-primary inline mr-2' />
-                  SOC Certifications
+                  Where does it come from?
                 </span>
                 <p className="text-gray">
-                  NEFA is SOC 1 Type 2 and SOC 2 Type 2 compliant. We are the world’s first cryptocurrency exchange and custodian to complete these exams.
+                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                 </p>
               </li>
             </ul>
@@ -48,5 +48,7 @@ export default function SecuritySection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
+
+export default HomeSection4

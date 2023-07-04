@@ -4,12 +4,15 @@ import { BsList, BsX } from 'react-icons/bs';
 import { useMediaQuery } from 'react-responsive';
 
 import logo from '../../images/chetulogo-dark.png'
-import PrimaryButton from '../buttons/PrimaryButton'
 import SecondaryButton from '../buttons/SecondaryButton'
 import Menus from './Menus';
 import { useNavigate } from 'react-router-dom';
 
+import { DetailState } from '../../context/DetailProvider';
+import UserDropdown from './UserDropdown';
+
 const Navbar = () => {
+  const { user } = DetailState();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [backgroundwhite, setBackgroundWhite] = useState(false);
 
@@ -23,10 +26,7 @@ const Navbar = () => {
   const handleHome = () => {
     navigate('/'); // Navigate to the '/Home' page
   };
-  const handleLogout = () => {
-    localStorage.removeItem("userInfo")
-    navigate('/'); // Navigate to the '/Login' page
-  };
+
 
   const handleWindowScroll = (e) => {
     const height = window.scrollY;
@@ -72,12 +72,13 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden gap-4 md:flex">
-          <SecondaryButton onClick={handleLogin}>
-            Sign In
-          </SecondaryButton>
-          <PrimaryButton onClick={handleLogout}>
-            Sign Out
-          </PrimaryButton>
+          {user ? (
+            <UserDropdown />
+          ) : (
+            <SecondaryButton onClick={handleLogin}>
+              Sign In
+            </SecondaryButton>
+          )}
         </div>
         <div className="md:hidden text-2xl">
           <button className="z-50 p-4 block transition-all" onClick={() => setDropdownOpen(!dropdownOpen)}>
@@ -96,14 +97,17 @@ const Navbar = () => {
           })}>
             <div className="h-screen left-0 bg-black bg-opacity-30" onClick={handleBlackScreenClick}>
               <div className="z-20 shadow-xl bg-white p-6">
+
                 <div className="gap-4 flex mb-6">
-                  <SecondaryButton className="w-full" onClick={handleLogin}>
-                    Sign In
-                  </SecondaryButton>
-                  <PrimaryButton className="w-full" onClick={handleLogout}>
-                    Sign Up
-                  </PrimaryButton>
+                  {user ? (
+                    <UserDropdown />
+                  ) : (
+                    <SecondaryButton onClick={handleLogin}>
+                      Sign In
+                    </SecondaryButton>
+                  )}
                 </div>
+
                 <div className="mb-4">
                   <Menus />
                 </div>

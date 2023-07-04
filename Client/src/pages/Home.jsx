@@ -4,28 +4,28 @@ import Layout from "../components/Layout";
 import SliderSection from "../components/sections/SliderSection";
 import SliderbottomSection from "../components/sections/SliderbottomSection";
 import AwardSection from "../components/sections/AwardSection";
-import Body1Section from "../components/sections/Body1Section";
+import HomeSection2 from "../components/sections/HomeSection2";
 import BackToTopSection from "../components/sections/BackToTopSection";
 import FaqSection from "../components/sections/FaqSection";
-import StepSection from "../components/sections/StepSection";
-import SecuritySection from "../components/sections/SecuritySection";
-import TradingToolsSection from "../components/sections/TradingToolsSection";
-import BuyAndTradeSection from "../components/sections/BuyAndTradeSection";
+import HomeSection5 from "../components/sections/HomeSection5";
+import HomeSection4 from "../components/sections/HomeSection4";
+import HomeSection3 from "../components/sections/HomeSection3";
+import HomeSection1 from "../components/sections/HomeSection1";
 const Home = () => {
-    return (
-        <Layout>
-          <SliderSection />
-          <SliderbottomSection />
-          <BuyAndTradeSection />
-          <AwardSection />
-          <Body1Section />
-          <TradingToolsSection />
-          <SecuritySection />
-          <StepSection />
-          <FaqSection />
-          <BackToTopSection />
-        </Layout>
-      );
+  return (
+    <Layout>
+      <SliderSection />
+      <SliderbottomSection />
+      <HomeSection1 />
+      <AwardSection />
+      <HomeSection2 />
+      <HomeSection3 />
+      <HomeSection4 />
+      <HomeSection5 />
+      <FaqSection />
+      <BackToTopSection />
+    </Layout>
+  );
 }
 
 export default Home

@@ -15,7 +15,7 @@ const AwardSection = () => {
                         <h2 className="text-3xl font-bold mb-4">Lorem Ipsum is simply dummy text </h2>
                         <p className='text-gray'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     </div>
-                    <div className="mx-4">
+                    <div className="mx-4 mt-20">
                         <div className="grid grid-cols-2 md:grid-cols-6 gap-20">
                             <img src={award1} className="basis-1/2" alt="" />
                             <img src={award2} className="basis-1/2" alt="" />
