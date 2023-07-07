@@ -11,21 +11,21 @@ import DropdownButton from "../buttons/DropdownButton";
 
 const SliderSection = () => {
   return (
-    <section className='relative bg-green pt-[140px] bg-opacity-5 pb-24'>
-      {/* <span className="absolute bg-[#0097a4] -left-28 -top-28 rounded-full opacity-[20%] blur-3xl aspect-square h-[350px] -z-10 animate-pulse" />
-      <span className="absolute bg-gradient-to-br from-primary to-secondary -right-28 -bottom-28 rounded-full opacity-[15%] blur-3xl  delay-700 duration-1000 aspect-square h-[550px] -z-10" /> */}
+    <section className='relative bg-blue pt-[140px] bg-opacity-5 pb-24'>
+      <span className="absolute bg-[#0097a4] -left-28 -top-28 rounded-full opacity-[20%] blur-3xl aspect-square h-[350px] -z-10 animate-pulse" />
+      <span className="absolute bg-gradient-to-br from-primary to-secondary -right-28 -bottom-28 rounded-full opacity-[15%] blur-3xl  delay-700 duration-1000 aspect-square h-[550px] -z-10" />
 
       <div className="container pt-10 px-4 mx-auto grid md:grid-cols-2">
         <div className="relative hidden md:block">
-          {/* <BlueCircleParticle className="absolute top-0 left-11 duration-[5s]" />
-          <OrangeCircleParticle className="absolute bottom-1/4 right-0" /> */}
+          <BlueCircleParticle className="absolute top-0 left-11 duration-[5s]" />
+          <OrangeCircleParticle className="absolute bottom-1/4 right-0" />
 
           <img src={globoCrypto} alt="Globe" />
         </div>
         <div className='flex items-center'>
           <div className='relative'>
-            {/* <StarParticle className="absolute top-0 right-0" />
-            <PurpleCircleParticle className="absolute bottom-0 -left-12" /> */}
+            <StarParticle className="absolute top-0 right-0" />
+            <PurpleCircleParticle className="absolute bottom-0 -left-12" />
 
             <p className='text-primary'>LOREM IPSUM</p>
             <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold leading-normal'>

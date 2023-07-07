@@ -28,12 +28,15 @@ module.exports = {
       colors: {
         primary: "#0db4c4",
         secondary: "#0097a4",
-        blue: "#2F7CF0",
+        blue: "#2a68ff",
         black: "#222222",
         gray: "#666666",
         lightgray: "#DDDDDD",
         green: "#28C165",
         red: "#F4574D",
+        grayInc: "#f1f4f8",
+        cardShadow: "#f7f8f9",
+        textColor: "#252b36"
       }
     },
   },
