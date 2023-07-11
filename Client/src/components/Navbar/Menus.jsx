@@ -1,28 +1,27 @@
-import React from 'react';
-
+import React from 'react'
 import DropdownMenu from './DropdownMenu';
 import { NavLink, Link } from 'react-router-dom';
 
 const nav_links = [
   {
-    path: '/apage',
-    display: 'APage'
+    path: '/kb',
+    display: 'KnowledgeBase'
   },
   {
-    path: '/bpage',
-    display: 'BPage'
+    path: '/tags',
+    display: 'Tags'
   },
   {
-    path: '/cpage',
-    display: 'CPage'
+    path: '/users',
+    display: 'Users'
   },
-  {
-    path: '/dummy',
-    display: 'Dummy'
-  }
+  // {
+  //   path: '/dummy',
+  //   display: 'Dummy'
+  // }
 ]
 
-export default function Menus() {
+const Menus = () => {
   return (
     <>
       <ul className='mx-4 gap-8 xl:flex'>
@@ -32,14 +31,16 @@ export default function Menus() {
           </li>
         ))}
       </ul>
-      <DropdownMenu>
+      {/* <DropdownMenu>
         <div className="w-full">
           <a href="/DropDown1" className='hover:text-primary py-2 block'>DropDown 1</a>
         </div>
         <div className="w-full">
           <a href="/DropDown2" className='hover:text-primary py-2 block'>DropDown 2</a>
         </div>
-      </DropdownMenu>
+      </DropdownMenu> */}
     </>
-  );
+  )
 }
+
+export default Menus

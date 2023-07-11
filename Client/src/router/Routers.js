@@ -3,11 +3,12 @@ import { Routes, Route } from 'react-router-dom';
 
 
 import Home from '../pages/Home';
-import APage from '../pages/APage';
-import BPage from '../pages/BPage';
-import CPage from '../pages/CPage';
+import KnowledgeBase from '../pages/KnowledgeBase';
+import Tags from '../pages/Tags';
+import Users from '../pages/Users';
 import Error404 from '../pages/Error404';
 import LoginPage from '../pages/LoginPage'
+import AddQuestion from '../pages/AddQuestion';
 
 
 const Routers = () => {
@@ -15,10 +16,11 @@ const Routers = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/apage" element={<APage />} />
-      <Route path="/bpage" element={<BPage />} />
-      <Route path="/cpage" element={<CPage />} />
+      <Route path="/kb" element={<KnowledgeBase />} />
+      <Route path="/tags" element={<Tags />} />
+      <Route path="/users" element={<Users />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/add-question" element={<AddQuestion />} />
 
       <Route path="/*" element={<Error404 />} />
     </Routes>

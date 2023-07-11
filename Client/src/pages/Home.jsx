@@ -11,12 +11,14 @@ import HomeSection5 from "../components/sections/HomeSection5";
 import HomeSection4 from "../components/sections/HomeSection4";
 import HomeSection3 from "../components/sections/HomeSection3";
 import HomeSection1 from "../components/sections/HomeSection1";
+import HomeSection6 from '../components/sections/HomeSection6';
 const Home = () => {
   return (
     <Layout>
       <SliderSection />
       <SliderbottomSection />
       <HomeSection1 />
+      {/* <HomeSection6 /> */}
       <AwardSection />
       <HomeSection2 />
       <HomeSection3 />

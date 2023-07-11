@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import Search from '../components/SearchContainer/Search'
 import List from '../components/QuestionsContainer/List'
 
-const APage = () => {
+const Questions = () => {
   return (
     <Layout>
       <Search />
@@ -12,4 +12,4 @@ const APage = () => {
   )
 }
 
-export default APage
+export default Questions

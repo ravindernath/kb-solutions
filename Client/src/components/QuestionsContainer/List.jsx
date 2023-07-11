@@ -1,120 +1,153 @@
 import React from 'react'
-import { BiTimeFive } from 'react-icons/bi'
+import { AiFillStar } from 'react-icons/ai'
 import react1 from '../../images/tech-icons/react1.png'
 
+const product = {
+    rating: 3.9,
+}
+
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
 
 const Data = [
     {
         id: 1,
-        image: react1,
-        title: 'Web Developer',
-        time: 'Now',
-        location: 'Lorem Ipsum',
+        time: 'Mar 16, 2020',
+        tags: ['# Javascript ', '# ReactJS ', '# NodeJS ', '# MongoDB '],
+        title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
         desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        company: 'Lorem Ipsum has'
+        image: react1,
+        user: 'Ravinder Nath',
+        department: 'TA, ETC',
+        answerCount: 117,
+        LikeCount: 50,
+        DisLikeCount: 2,
     },
-
     {
         id: 2,
-        image: react1,
-        title: 'Web Developer',
         time: 'Now',
-        location: 'Lorem Ipsum',
+        tags: ['# .Net ', '# MySQL ', '# C++ ', '# Android '],
+        title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
         desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        company: 'Lorem Ipsum has'
+        image: react1,
+        user: 'Niraj Roy',
+        department: 'TA, ETC',
+        answerCount: 17,
+        LikeCount: 100,
+        DisLikeCount: 17,
     },
-
     {
         id: 3,
-        image: react1,
-        title: 'Web Developer',
         time: 'Now',
-        location: 'Lorem Ipsum',
+        tags: ['# .Net ', '# MySQL ', '# C++ ', '# Android '],
+        title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
         desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        company: 'Lorem Ipsum has'
+        image: react1,
+        user: 'Ashutosh',
+        department: 'ATA, ETC',
+        answerCount: 17,
+        LikeCount: 100,
+        DisLikeCount: 17,
     },
-
     {
         id: 4,
-        image: react1,
-        title: 'Web Developer',
         time: 'Now',
-        location: 'Lorem Ipsum',
+        tags: ['# .Net ', '# MySQL ', '# C++ ', '# Android '],
+        title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
         desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        company: 'Lorem Ipsum has'
-    },
-
-    {
-        id: 5,
         image: react1,
-        title: 'Web Developer',
-        time: 'Now',
-        location: 'Lorem Ipsum',
-        desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-        company: 'Lorem Ipsum has'
+        user: 'Nitin Kumar',
+        department: 'TA, ETC',
+        answerCount: 17,
+        LikeCount: 100,
+        DisLikeCount: 17,
     }
+
 ]
 
 const List = () => {
     return (
 
         <section className='relative pt-[10px] bg-opacity-5 pb-24'>
-            <div className="container pt-10 px-4 w-full">
-                <div className="relative hidden md:block">
-
-                    <div className="questionContainer flex gap-10 justify-center flex-wrap items-center py-10">
-                        {
-                            Data.map(({ id, image, title, time, location, desc, company }) => {
-                                return (
-                                    <div key={id} className="group group/item w-[900px] p-[20px] bg-white rounded-[10px] hover:bg-primary shadow-lg shadow-greyIsh-400/700 hover:shadow-lg" >
-
-                                        <span className="flex justify-between items-center gap-4">
-                                            <h1 className="font-semibold text-[16px] text-textColor group-hover:text-white">{title}</h1>
-                                            <span className="flex items-center text-[#ccc] gap-1">
-                                                <BiTimeFive />{time}
-                                            </span>
-                                        </span>
-
-                                        <h6 className="text-[#ccc]">{location}</h6>
-                                        <p className="text-[13px] text-[#959595] pt-[20px] border-t-[2px] mt-[20px] group-hover:text-white">
-                                            {desc}
-                                        </p>
-
-                                        <div className="technology flex items-center gap-2">
-                                            <img src={image} alt="tech-icon" className="w-[10%]" />
-                                            <span className="text-[14px] py-[1rem] block group-hover:text-white"> {company}</span>
-                                        </div>
-
-                                        <button className="border-[0px] rounded-[10px] block p-[10px] w-full text-[14px] font-semibold text-textColor
-                            hover:bg-white group-hover/item:text-textColor group-hover:text-white">Read More...</button>
+            <div className="container bg-white py-10 sm:py-10">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    {
+                        Data.map(({ id, time, tags, title, desc, image, user, department, answerCount, LikeCount, DisLikeCount }) => {
+                            return (
+                                <article key={id} className="flex w-full flex-col items-start justify-between mb-7 p-5 border border-gray">
+                                    <div className="flex items-center gap-x-4 text-xs">
+                                        <time dateTime="2020-03-16" className="text-gray-500">{time}</time>
+                                        <span className="relative rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{tags}</span>
                                     </div>
-                                )
-                            })
+                                    <div className="group relative">
+                                        <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                                            <span className="absolute inset-0"></span>
+                                            {title}
+                                        </h3>
+                                        <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{desc}</p>
+                                    </div>
+                                    <div className="mx-auto w-full px-6 lg:px-8">
+                                        <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-left lg:grid-cols-3">
+                                            <div className="flex max-w-xs flex-col gap-y-4">
+                                                <div className="relative mt-8 flex items-center gap-x-4">
+                                                    <img src={image} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
+                                                    <div className="text-sm leading-6">
+                                                        <p className="font-semibold text-gray-900">
+                                                            <a href="/">
+                                                                <span className="absolute inset-0"></span>
+                                                                {user}
+                                                            </a>
+                                                        </p>
+                                                        <p className="text-gray-600">{department}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                                                <div className="relative mt-8 flex items-center gap-x-4">
 
-                        }
-
-                    </div>
-
+                                                </div>
+                                            </div>
+                                            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                                                <div className="relative mt-8 flex items-center gap-x-4">
+                                                    <div className="flex items-center">
+                                                        {[0, 1, 2, 3, 4].map((rating) => (
+                                                            <AiFillStar
+                                                                key={rating}
+                                                                className={classNames(
+                                                                    product.rating > rating ? 'text-gray-900' : 'text-gray-200',
+                                                                    'h-5 w-5 flex-shrink-0'
+                                                                )}
+                                                                aria-hidden="true"
+                                                            />
+                                                        ))}
+                                                    </div>
+                                                    <p className="sr-only">{product.rating} out of 5 stars</p>
+                                                    <span className="ml-3 text-sm text-center font-medium text-primary hover:text-secondary">
+                                                        {answerCount} Answers
+                                                    </span>
+                                                    <span className="ml-3 text-sm text-center font-medium text-primary hover:text-secondary">
+                                                        {LikeCount} Up
+                                                    </span>
+                                                    <span className="ml-3 text-sm text-center font-medium text-primary hover:text-secondary">
+                                                        {DisLikeCount} Down
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </article>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </section>
