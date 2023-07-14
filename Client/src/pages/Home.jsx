@@ -18,7 +18,7 @@ const Home = () => {
       <SliderSection />
       <SliderbottomSection />
       <HomeSection1 />
-      {/* <HomeSection6 /> */}
+      <HomeSection6 />
       <AwardSection />
       <HomeSection2 />
       <HomeSection3 />

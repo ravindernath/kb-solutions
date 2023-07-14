@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
 import react1 from '../../images/tech-icons/react1.png'
+import { Link } from 'react-router-dom'
 
 const product = {
     rating: 3.9,
@@ -89,10 +90,9 @@ const List = () => {
                                         <span className="relative rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{tags}</span>
                                     </div>
                                     <div className="group relative">
-                                        <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                                            <span className="absolute inset-0"></span>
+                                        <Link to="/question" className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                                             {title}
-                                        </h3>
+                                        </Link>
                                         <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{desc}</p>
                                     </div>
                                     <div className="mx-auto w-full px-6 lg:px-8">
