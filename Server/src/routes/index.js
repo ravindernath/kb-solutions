@@ -1,17 +1,16 @@
-// const express = require('express');
+const express = require('express');
 
-// const questionRouter = require('./questionRouter');
-// // const answerRouter = require('./');
-// // const commentRouter = require('./');
+const router = express.Router();
+const questionRouter = require('./questionRouter');
+const answerRouter = require('./answerRouter');
+const commentsRouter = require('./commentsRouter');
 
-// const router = express.Router()
+router.get('/', (req, res) => {
+    res.send('Welcome to KB api')
+})
 
-// router.get('/', (req, res) => {
-//     res.send('Welcome to KB api')
-// })
+router.use('/question', questionRouter);
+router.use('/answer', answerRouter);
+router.use('/comment', commentsRouter);
 
-// router.use('/question', questionRouter)
-
-
-
-// module.exports = router; 
+module.exports = router;

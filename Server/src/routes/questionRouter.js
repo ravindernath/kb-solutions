@@ -1,15 +1,7 @@
 const express = require('express');
-const { questionRouter } = require("../controllers/questionControllers");
+const router = express.Router();
+const questionController = require('../controllers/questionController');
 
-const router = express.Router()
+router.post('/', questionController.createQuestion);
 
-router.get('/', (req, res) => {
-    res.send('Welcome to KB api')
-})
-
-
-router.use('/question', questionRouter)
-
-
-
-module.exports = router; 
+module.exports = router;

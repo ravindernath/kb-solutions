@@ -6,9 +6,7 @@ const answerSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: "Questions"
         },
-        answer: { type: String, required: true },
-        body: { type: String, required: true, unique: true },
-        tags: [],
+        answer: { type: String },
         created_at: {
             type: Date,
             default: Date.now(),
@@ -16,14 +14,11 @@ const answerSchema = new mongoose.Schema(
         user: { type: Object },
         comment_id: {
             type: mongoose.Schema.Types.ObjectId,
-            default: "Comments",
+            ref: "Comments",
         },
-    },
-    {
-        timestamps: true,
     }
 );
 
-const answer = mongoose.model("Answer", answerSchema)
+const answer = mongoose.model("Answers", answerSchema)
 
 module.exports = answer;

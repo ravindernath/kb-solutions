@@ -1,9 +1,9 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const questionSchema = new mongoose.Schema(
     {
         title: { type: String, required: true },
-        body: { type: String, required: true, unique: true },
+        body: { type: String, required: true},
         tags: [],
         created_at: {
             type: Date,
@@ -12,11 +12,8 @@ const questionSchema = new mongoose.Schema(
         user: { type: Object },
         comment_id: {
             type: mongoose.Schema.Types.ObjectId,
-            default: "Comments",
+            ref: "Comments",
         },
-    },
-    {
-        timestamps: true,
     }
 );
 
