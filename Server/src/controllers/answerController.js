@@ -16,7 +16,7 @@ async function createAnswer(req, res) {
   } catch (err) {
     res.status(400).send({
       status: false,
-      message: "Error while adding answer"
+      message: "Error while adding Answer"
     });
   }
 }

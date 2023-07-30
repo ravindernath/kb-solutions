@@ -11,7 +11,7 @@ async function addComment(req, res) {
     // console.log('req.params.id:', req.params.id);
     // console.log('req.body.comment:', req.body.comment);
     // console.log('req.body.user:', req.body.user);
-
+    
     const doc = await CommentDB.create(commentData);
     res.status(201).send({
       status: true,

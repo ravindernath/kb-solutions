@@ -14,10 +14,13 @@ function classNames(...classes) {
 
 const List = ({ question }) => {
 
+    // let tags = JSON.parse(question?.tags[0])
+
     function truncate (str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "....." : str
     }
 
+    const tags = [];
 
     return (
 
@@ -30,7 +33,18 @@ const List = ({ question }) => {
                                 <article key={index} className="flex w-full flex-col items-start justify-between mb-7 p-5 border border-gray">
                                     <div className="flex items-center gap-x-4 text-xs">
                                         <time dateTime="2020-03-16" className="text-gray-500">{new Date(question?.created_at).toLocaleString()}</time>
-                                        <span className="relative rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Tags</span>
+                                        {/* <span className="relative rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Tags</span> */}
+                                        <div>
+                                            {
+                                                tags.map((_tag) => {
+                                                    return (
+                                                        <span className="relative rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                                                            {_tag}
+                                                        </span>
+                                                    )
+                                                })
+                                            }
+                                        </div>
                                     </div>
                                     <div className="group relative">
                                         <Link to="/question" className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
@@ -42,7 +56,7 @@ const List = ({ question }) => {
                                         <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-left lg:grid-cols-3">
                                             <div className="flex max-w-xs flex-col gap-y-4">
                                                 <div className="relative mt-8 flex items-center gap-x-4">
-                                                    {/* <img src={image} alt="" className="h-10 w-10 rounded-full bg-gray-50" /> */}
+                                                    <img src={question?.image} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
                                                     <div className="text-sm leading-6">
                                                         <p className="font-semibold text-gray-900">
                                                             <span className="absolute inset-0"></span>
