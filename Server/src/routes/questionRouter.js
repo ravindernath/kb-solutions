@@ -93,9 +93,13 @@ router.get("/:id", async (req, res) => {
   try {
     // const question = await QuestionDB.findOne({ _id: req.params.id });
     // res.status(200).send(question);
+    
+      // Use the new keyword when creating ObjectId
+      const objectId = new mongoose.Types.ObjectId(req.params.id);
+
     QuestionDB.aggregate([
       {
-        $match: { _id: mongoose.Types.ObjectId(req.params.id) },
+        $match: { _id: objectId },
       },
       {
         $lookup: {
@@ -173,7 +177,7 @@ router.get("/:id", async (req, res) => {
         res.status(400).send(error);
       });
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(400).send({
       message: "Question not found",
     });

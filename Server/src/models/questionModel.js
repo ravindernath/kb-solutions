@@ -9,7 +9,7 @@ const questionSchema = new mongoose.Schema(
             type: Date,
             default: Date.now(),
         },
-        user: { type: Object },
+        user: Object,
         comment_id: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Comments",

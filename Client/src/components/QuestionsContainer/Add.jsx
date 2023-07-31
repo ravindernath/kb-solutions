@@ -38,7 +38,7 @@ const Add = () => {
                 title: title,
                 body: body,
                 tag: JSON.stringify(tags),
-                user: userInfo.name
+                user: userInfo
             }
 
             await axios.post('/api/question', bodyJSON).then((res) => {

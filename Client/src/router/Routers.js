@@ -9,7 +9,7 @@ import Users from '../pages/Users';
 import Error404 from '../pages/Error404';
 import LoginPage from '../pages/LoginPage'
 import AddQuestion from '../pages/AddQuestion';
-import ViewQuestion from '../components/QuestionsContainer/ViewQuestion';
+import ViewQuestion from '../pages/ViewQuestion';
 
 
 const Routers = () => {

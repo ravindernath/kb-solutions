@@ -9,7 +9,7 @@ const Search = () => {
             <div className="container pt-10 px-4 w-full">
                 <div className="relative hidden md:block">
 
-                    <div className="searchDiv grid pg-10 bg-black rounded-[10px] p-[3rem]">
+                    {/* <div className="searchDiv grid pg-10 bg-black rounded-[10px] p-[3rem]">
 
 
                         <form action="">
@@ -88,7 +88,7 @@ const Search = () => {
                             <span className="text-[#fff] cursor-pointer"> Clear All </span>
                         </div>
 
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

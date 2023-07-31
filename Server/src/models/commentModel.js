@@ -6,12 +6,12 @@ const commentSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: "Questions"
         },
-        comment: { type: String },
+        comment: String,
         created_at: {
             type: Date,
             default: Date.now(),
         },
-        user: { type: Object },
+        user: Object ,
     }
 );
 
