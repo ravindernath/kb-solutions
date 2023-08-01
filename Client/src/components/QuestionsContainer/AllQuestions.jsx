@@ -24,10 +24,10 @@ const AllQuestions = ({ question }) => {
     <>
       <div className="flex items-center gap-x-4 text-xs mb-5">
         <time dateTime="2020-03-16" className="text-gray-500"><strong>{new Date(question?.created_at).toLocaleString()}</strong></time>
-        <div className="relative rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+        <div className="relative rounded-full px-3 py-1.5 font-medium text-gray-600">
           {tags.map((_tag, i) => { 
             return (
-              <span key={i} className="relative rounded-full bg-gray-100 px-3 mr-2 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+              <span key={i} className="relative rounded-full bg-gray-300 px-3 mr-2 py-1.5 font-medium text-gray-600 hover:bg-gray-400">
                 {_tag}
               </span>
             );
@@ -53,7 +53,7 @@ const AllQuestions = ({ question }) => {
                   {/* {question?.user?.displayName ? question?.user?.displayName : String(question?.user?.email).split('@')[0]} */}
                   {question?.user?.name}
                 </p>
-                <p className="text-gray-600">ETC</p>
+                <p className="text-gray-600">{question?.user?.role}</p>
               </div>
             </div>
           </div>

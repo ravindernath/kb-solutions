@@ -3,7 +3,7 @@ const User = require("../models/userModel");
 const generateToken = require("../config/generateToken");
 
 const registerUser = asyncHandler(async (req,res) => {
-    const { name, email, password, pic } = req.body; 
+    const { name, email, password, role, pic } = req.body; 
 
     if (!name || !email || !password) {
         res.status(400);
@@ -21,6 +21,7 @@ const registerUser = asyncHandler(async (req,res) => {
         name,
         email,
         password,
+        role,
         pic,
     });
 
@@ -29,6 +30,7 @@ const registerUser = asyncHandler(async (req,res) => {
             id:user.id,
             name:user.name,
             email:user.email,
+            role:user.role,
             pic:user.pic,
             //generate JWT token
             token: generateToken(user.id),
@@ -49,6 +51,7 @@ const authUser = asyncHandler(async (req, res) => {
             id: user.id,
             name: user.name,
             email: user.email,
+            role: user.role,
             pic: user.pic,
             token: generateToken(user.id),
         });
