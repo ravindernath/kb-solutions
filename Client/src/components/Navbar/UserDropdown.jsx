@@ -1,6 +1,6 @@
 import React from 'react';
 import { Fragment } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { DetailState } from '../../context/DetailProvider';
 import { GoChevronDown } from 'react-icons/go'
 import { AiOutlineLogout, AiOutlineSetting, AiOutlineUser } from 'react-icons/ai'
@@ -60,10 +60,10 @@ const UserDropdown = () => {
                                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                                     </div>
                                     <div>
-                                        <a href={item.href} className="font-semibold text-gray-900">
+                                        <Link to={item.href} className="font-semibold text-gray-900">
                                             {item.name}
                                             <span className="absolute inset-0" />
-                                        </a>
+                                        </Link>
                                         <p className="mt-1 text-gray-600">{item.description}</p>
                                     </div>
                                 </div>

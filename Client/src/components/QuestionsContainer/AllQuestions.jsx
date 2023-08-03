@@ -18,7 +18,7 @@ const AllQuestions = ({ question }) => {
     }
 
     let tags = JSON.parse(question?.tags[0])
-    console.log(question?.tags[0])
+    // console.log(question?.tags[0])
     
   return (
     <>
@@ -62,7 +62,7 @@ const AllQuestions = ({ question }) => {
           </div>
           <div className="mx-auto flex max-w-xs flex-col gap-y-4">
             <div className="relative mt-8 flex items-center gap-x-4">
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 {[0, 1, 2, 3, 4].map((rating) => (
                   <AiFillStar
                     key={rating}
@@ -76,16 +76,16 @@ const AllQuestions = ({ question }) => {
                   />
                 ))}
               </div>
-              <p className="sr-only">{product.rating} out of 5 stars</p>
+              <p className="sr-only">{product.rating} out of 5 stars</p> */}
               <span className="ml-3 text-sm text-center font-medium text-primary hover:text-secondary">
                 {question?.answerDetails?.length || 0} Answers
               </span>
-              <span className="ml-3 text-sm text-center font-medium text-primary hover:text-secondary">
+              {/* <span className="ml-3 text-sm text-center font-medium text-primary hover:text-secondary">
                 10 Up
               </span>
               <span className="ml-3 text-sm text-center font-medium text-primary hover:text-secondary">
                 -10 Down
-              </span>
+              </span> */}
             </div>
           </div>
         </dl>

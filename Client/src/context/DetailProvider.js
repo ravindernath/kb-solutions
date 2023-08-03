@@ -14,6 +14,7 @@ const DetailProvider = ({children}) => {
             setUser(userInfo);
         
             if (!userInfo) {
+              // navigate('/'); // Navigate to the '/Home' page
               // console.log("please login")
             }
           } catch (error) {

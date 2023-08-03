@@ -9,11 +9,14 @@ const Questions = () => {
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
+    
+    window.scrollTo(0, 0);
+
     async function getQuestion () {
       await axios
         .get("/api/question")
         .then((res) => {
-        console.log(res.data)
+        // console.log(res.data)
         setQuestions(res.data.reverse())
       })
       .catch((err) => {
@@ -22,11 +25,11 @@ const Questions = () => {
     }
     getQuestion()
   }, []);
-
+  
+    
   return (
     <Layout>
       <Search />
-      {/* <List1 question = { questions }/> */}
       <List questions = {questions}/>
     </Layout>
   )

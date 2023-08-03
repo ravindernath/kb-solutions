@@ -5,15 +5,15 @@ import { TagsInput } from 'react-tag-input-component'
 import PrimaryButton from '../buttons/PrimaryButton'
 import SecondaryButton from '../buttons/SecondaryButton'
 import { useNavigate } from 'react-router-dom';
-import { DetailState } from '../../context/DetailProvider';
 import axios from 'axios';
+import { DetailState } from '../../context/DetailProvider';
 
 const Add = () => {
 
 
-    // const { user, setUser } = DetailState();
+    const { user, setUser } = DetailState();
 
-    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    // const userInfo = JSON.parse(localStorage.getItem('userInfo'));
     const [loading, setLoading] = useState(false)
 
 
@@ -38,7 +38,7 @@ const Add = () => {
                 title: title,
                 body: body,
                 tag: JSON.stringify(tags),
-                user: userInfo
+                user: user
             }
 
             await axios.post('/api/question', bodyJSON).then((res) => {

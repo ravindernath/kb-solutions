@@ -17,7 +17,7 @@ const Login = () => {
             toast.error("Please Fill all the Feilds");
             return;
         }
-        console.log(email, password);
+        // console.log(email, password);
         try {
             const config = {
                 headers: {
@@ -32,19 +32,19 @@ const Login = () => {
             );
 
             // Extract only the required user information from the response data
-                const userInfo = {
-                    id: data.id,
-                    name: data.name,
-                    email: data.email,
-                    role: data.role,
-                    pic: data.pic,
-                    // Add any other required user information here, excluding the token
-                };
+                // const userInfo = {
+                //     id: data.id,
+                //     name: data.name,
+                //     email: data.email,
+                //     role: data.role,
+                //     pic: data.pic,
+                //     // Add any other required user information here, excluding the token
+                // };
                 
-            console.log(JSON.stringify(data));
-            console.log(JSON.stringify(userInfo));
+            // console.log(JSON.stringify(data));
+            // console.log(JSON.stringify(userInfo));
             console.log("Login Successful");
-            localStorage.setItem("userInfo", JSON.stringify(userInfo));
+            localStorage.setItem("userInfo", JSON.stringify(data));
             navigate("/kb");
             // toast.success("Login Successful");
         } catch (error) {

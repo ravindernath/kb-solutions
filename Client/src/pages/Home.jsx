@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Layout from "../components/Layout";
 import SliderSection from "../components/sections/SliderSection";
@@ -13,6 +13,13 @@ import HomeSection3 from "../components/sections/HomeSection3";
 import HomeSection1 from "../components/sections/HomeSection1";
 import HomeSection6 from '../components/sections/HomeSection6';
 const Home = () => {
+     
+   // Reset the scroll position to top on component mount
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <Layout>
       <SliderSection />
