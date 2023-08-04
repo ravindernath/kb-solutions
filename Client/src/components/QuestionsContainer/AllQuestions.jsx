@@ -38,9 +38,9 @@ const AllQuestions = ({ question }) => {
         <Link to={`/question?q=${question?._id}`} className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
           {question?.title}
         </Link>
-        <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+        <div className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
           {ReactHtmlParser(truncate(question?.body, 350))}
-        </p>
+        </div>
       </div>
       <div className="mx-auto w-full px-6 lg:px-8">
         <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-left lg:grid-cols-3">
@@ -50,8 +50,7 @@ const AllQuestions = ({ question }) => {
               <div className="text-sm leading-6">
                 <p className="font-semibold text-gray-900">
                   <span className="absolute inset-0"></span>
-                  {/* {question?.user?.displayName ? question?.user?.displayName : String(question?.user?.email).split('@')[0]} */}
-                  {question?.user?.name}
+                  {question?.user?.name ? question?.user?.name : String(question?.user?.email).split('@')[0]}
                 </p>
                 <p className="text-gray-600">{question?.user?.role}</p>
               </div>

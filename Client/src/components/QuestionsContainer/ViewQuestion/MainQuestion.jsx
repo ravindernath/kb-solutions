@@ -94,9 +94,9 @@ const MainQuestion = () => {
     }
 
     return (
-        <>
-            <div className="bg-white py-24 sm:py-32">
-                <div className="mx-auto max-w-7xl mt-20 px-6 lg:px-8">
+        <section className='relative pt-[140px] bg-opacity-5 pb-24'>
+            <div className="container bg-white py-10 sm:py-10">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto lg:mx-0">
                         <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">{questionData?.title}</h3>
                         {/* <p className="mt-2 text-lg leading-8 text-gray-600">
@@ -133,8 +133,7 @@ const MainQuestion = () => {
                                     <div className="text-sm leading-6">
                                         <p className="font-semibold text-gray-900">
                                                 <span className="absolute inset-0" />
-                                                {/* {questionData?.user?.displayName ? questionData?.user?.displayName : String(questionData?.user?.email).split('@')[0]} */}
-                                                {questionData?.user?.name}
+                                                {questionData?.user?.name ? questionData?.user?.name : String(questionData?.user?.email).split('@')[0]}
                                         </p>
                                         <p className="text-gray-600">{questionData?.user?.role}&nbsp; / {questionData?.user?.email} </p>
                                     </div>
@@ -169,8 +168,7 @@ const MainQuestion = () => {
                                                         <div className="text-sm leading-6">
                                                             <p className="font-semibold text-gray-900">
                                                                 <span className="absolute inset-0" />
-                                                                {/* {_qd?.user?.displayName ? _qd?.user?.displayName : String(_qd?.user?.email).split('@')[0]} */}
-                                                                    {_qd?.user?.name}
+                                                                {_qd?.user?.name ? _qd?.user?.name : String(_qd?.user?.email).split('@')[0]}
                                                             </p>
                                                             <p className="text-gray-600">{_qd?.user?.role} / {_qd?.user?.email} </p>
                                                         </div>
@@ -218,6 +216,17 @@ const MainQuestion = () => {
                                     <div key={_q?._id} className="mx-auto mt-10 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-10 lg:mx-0 lg:flex lg:max-w-none">
                                         <div className="p-8 sm:p-10 lg:flex-auto">
                                             
+                                            <div className="relative mb-2 flex items-center gap-x-4">
+                                                <img src={_q?.user?.pic} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
+                                                <div className="text-sm leading-6">
+                                                    <p className="font-semibold text-gray-900">
+                                                        <span className="absolute inset-0" />
+                                                        {_q?.user?.name ? _q?.user?.name : String(_q?.user?.email).split('@')[0]}
+                                                        
+                                                    </p>
+                                                    <p className="text-gray-600">{_q?.user?.role} / {_q?.user?.email} </p>
+                                                </div>
+                                            </div>
                                             <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
                                                 <div className="mt-2 flex items-center text-sm text-gray-500">
                                                     <BsFillCalendarDateFill className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
@@ -229,18 +238,6 @@ const MainQuestion = () => {
                                                 {ReactHtmlParser(_q?.answer)}
                                             </p>
 
-                                            <div className="relative mt-8 flex items-center gap-x-4">
-                                                <img src={_q?.user?.pic} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
-                                                <div className="text-sm leading-6">
-                                                    <p className="font-semibold text-gray-900">
-                                                        <span className="absolute inset-0" />
-                                                        {/* {_q?.user?.displayName ? _q?.user?.displayName : String(_q?.user?.email).split('@')[0]} */}
-                                                        {_q?.user?.name}
-                                                        
-                                                    </p>
-                                                    <p className="text-gray-600">{_q?.user?.role} / {_q?.user?.email} </p>
-                                                </div>
-                                            </div>
                                             {/* <div>
                                                 <div className="mt-10 flex items-center gap-x-4">
                                                     <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">Comments</h4>
@@ -310,7 +307,7 @@ const MainQuestion = () => {
                 </div>
             </div>
 
-        </>
+        </section>
     )
 }
 

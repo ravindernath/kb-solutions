@@ -29,19 +29,19 @@ const Routers = () => {
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/login" element={<LoginPage />} />
-      {/* <Route path="/kb" element={<KnowledgeBase />} /> */}
-      {/* <Route path="/tags" element={<Tags />} /> */}
+      <Route path="/kb" element={<KnowledgeBase />} />
+      <Route path="/tags" element={<Tags />} />
       {/* <Route path="/users" element={<Users />} /> */}
-      {/* <Route path="/add-question" element={<AddQuestion />} /> */}
+      <Route path="/add-question" element={<AddQuestion />} />
       <Route path="/question" element={<ViewQuestion />} />
 
       <Route path="/*" element={<Error404 />} />
 
       {/* Use the custom ProtectedRoute for the Users page */}
       <Route path="/users" element={<ProtectedRoute component={Users} />} />
-      <Route path="/kb" element={<ProtectedRoute component={KnowledgeBase} />} />
-      <Route path="/tags" element={<ProtectedRoute component={Tags} />} />
-      <Route path="/add-question" element={<ProtectedRoute component={AddQuestion} />} />
+      {/* <Route path="/kb" element={<ProtectedRoute component={KnowledgeBase} />} />
+      <Route path="/tags" element={<ProtectedRoute component={Tags} />} /> */}
+      {/* <Route path="/add-question" element={<ProtectedRoute component={AddQuestion} />} /> */}
 
 
 
